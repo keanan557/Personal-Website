@@ -6,8 +6,28 @@ h1{
     text-align: center;
 }
 
+.container .tab_box{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+}
+
+.container .tab_box .tab_btn{
+    padding: 1rem;
+    background: #fff;
+}
+
+.container .tab_box .tab_btn:hover{
+    transform: scale(1.1);
+    transition: .6s ease ;
+}
+
 .content_box .content{
     display: none;
+}
+
+.content_box .content h2{
+    text-align: center;
 }
 
 .content_box .content.active{
@@ -17,4 +37,12 @@ h1{
 @keyframes moving{
     from{transform: translateX(50px);opacity: 0;}
     to{transform: translateX(0px);opacity: 1;}
+}
+
+@media (max-width: 768px){
+    .container .tab_box{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+    }
 }
